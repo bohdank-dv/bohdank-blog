@@ -9,25 +9,25 @@ function catalogGetCategory(): array
             'category_id' => 1,
             'name'        => 'Business',
             'url'         => 'business',
-            'products'    => [1, 2, 3]
+            'posts'    => [1, 2, 3]
         ],
         2 => [
             'category_id' => 2,
             'name'        => 'Health',
             'url'         => 'health',
-            'products'    => [3, 4, 5]
+            'posts'    => [3, 4, 5]
         ],
         3 => [
             'category_id' => 3,
             'name'        => 'Entertainment',
             'url'         => 'entertainment',
-            'products'    => [2, 4, 6]
+            'posts'    => [2, 4, 6]
         ],
         4 => [
             'category_id' => 4,
             'name'        => 'Travel',
             'url'         => 'travel',
-            'products'    => [1, 2, 4]
+            'posts'    => [1, 2, 4]
         ]
     ];
 }
