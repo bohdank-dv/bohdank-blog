@@ -14,12 +14,12 @@ switch ($requestUri) {
         $page = 'contact-us.php';
         break;
     default:
-        if ($data = catalogGetCategoryByUrl($requestUri)) {
+        if ($data = blogGetCategoryByUrl($requestUri)) {
             $page = 'category.php';
             break;
         }
 
-        if ($data = catalogGetPostByUrl($requestUri)) {
+        if ($data = blogGetPostByUrl($requestUri)) {
             $page = 'post.php';
             break;
         }

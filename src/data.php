@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function catalogGetCategory(): array
+function blogGetCategory(): array
 {
     return [
         1 => [
@@ -32,7 +32,7 @@ function catalogGetCategory(): array
     ];
 }
 
-function catalogGetPost(): array
+function blogGetPost(): array
 {
     return [
         1 => [
@@ -116,20 +116,20 @@ function catalogGetPost(): array
     ];
 }
 
-function catalogGetCategoryPost(int $categoryId): array
+function blogGetCategoryPost(int $categoryId): array
 {
-    $categories = catalogGetCategory();
+    $categories = blogGetCategory();
 
     if (!isset($categories[$categoryId])) {
         throw new InvalidArgumentException("Category with ID $categoryId does not exist");
     }
 
     $postsForCategory = [];
-    $posts = catalogGetPost();
+    $posts = blogGetPost();
 
     foreach ($categories[$categoryId]['posts'] as $postId) {
         if (!isset($posts[$postId])) {
-            throw new InvalidArgumentException("Product with ID $postId from category $categoryId does not exist");
+            throw new InvalidArgumentException("Post with ID $postId from category $categoryId does not exist");
         }
 
         $postsForCategory[] = $posts[$postId];
@@ -138,10 +138,10 @@ function catalogGetCategoryPost(int $categoryId): array
     return $postsForCategory;
 }
 
-function catalogGetCategoryByUrl(string $url): ?array
+function blogGetCategoryByUrl(string $url): ?array
 {
     $data = array_filter(
-        catalogGetCategory(),
+        blogGetCategory(),
         static function ($category) use ($url) {
             return $category['url'] === $url;
         }
@@ -150,10 +150,10 @@ function catalogGetCategoryByUrl(string $url): ?array
     return array_pop($data);
 }
 
-function catalogGetPostByUrl(string $url): ?array
+function blogGetPostByUrl(string $url): ?array
 {
     $data = array_filter(
-        catalogGetPost(),
+        blogGetPost(),
         static function ($post) use ($url) {
             return $post['url'] === $url;
         }
@@ -164,7 +164,7 @@ function catalogGetPostByUrl(string $url): ?array
 
 function blogGetNewPosts(int $amount = 3): ?array
 {
-    $posts = catalogGetPost();
+    $posts = blogGetPost();
 
     usort($posts, function ($post1, $post2) {
         return $post2['publication_date'] <=> $post1['publication_date'];
