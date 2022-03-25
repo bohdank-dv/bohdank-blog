@@ -65,7 +65,7 @@ function catalogGetPost(): array
             'post_id' => 3,
             'name' => 'Post 3',
             'url' => 'post-3',
-            'author_name' => 'Jane Doe',
+            'author_name' => 'Jason Doe',
             'publication_date' => date('Y-m-d H:i:s', strtotime("-3 days")),
             'content' => <<<CONTENT
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
@@ -78,7 +78,7 @@ function catalogGetPost(): array
             'post_id' => 4,
             'name' => 'Post 4',
             'url' => 'post-4',
-            'author_name' => 'Jane Doe',
+            'author_name' => 'John Doe',
             'publication_date' => date('Y-m-d H:i:s', strtotime("-4 days")),
             'content' => <<<CONTENT
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
@@ -104,7 +104,7 @@ function catalogGetPost(): array
             'post_id' => 6,
             'name' => 'Post 6',
             'url' => 'post-6',
-            'author_name' => 'Jane Doe',
+            'author_name' => 'Jason Doe',
             'publication_date' => date('Y-m-d H:i:s', strtotime("-6 days")),
             'content' => <<<CONTENT
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
@@ -160,4 +160,15 @@ function catalogGetPostByUrl(string $url): ?array
     );
 
     return array_pop($data);
+}
+
+function blogGetNewPosts(int $amount = 3): ?array
+{
+    $posts = catalogGetPost();
+
+    usort($posts, function ($post1, $post2) {
+        return $post2['publication_date'] <=> $post1['publication_date'];
+    });
+
+    return array_slice($posts, 0, $amount, true);
 }

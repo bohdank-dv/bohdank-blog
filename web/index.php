@@ -7,6 +7,7 @@ $requestUri = trim($_SERVER['REQUEST_URI'], '/');
 
 switch ($requestUri) {
     case '':
+        $data = blogGetNewPosts();
         $page = 'home.php';
         break;
     case 'contact-us':

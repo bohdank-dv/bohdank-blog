@@ -1,30 +1,16 @@
-<!-- @TODO: Implement recently viewed posts -->
-<section title="Recently Viewed Posts">
-    <h2>Recently Viewed Posts</h2>
+<section title="Recently Published Posts">
+    <h2>Recently Published Posts</h2>
     <div class="post-list">
-        <div class="post">
-            <a href="/post-1-url" title="Post 1">
-                <img src="/post-placeholder.png" alt="Post 1" width="200"/>
-            </a>
-            <a href="/post-1-url" title="Post 1">Post 1</a>
-            <span>Author: John Doe</span>
-            <button type="button">Read</button>
-        </div>
-        <div class="post">
-            <a href="/post-2-url" title="Post 2">
-                <img src="/post-placeholder.png" alt="Post 2" width="200"/>
-            </a>
-            <a href="/post-2-url" title="Post 2">Post 2</a>
-            <span>Author: Jane Doe</span>
-            <button type="button">Read</button>
-        </div>
-        <div class="post">
-            <a href="/post-3-url" title="Post 3">
-                <img src="/post-placeholder.png" alt="Post 3" width="200"/>
-            </a>
-            <a href="/post-3-url" title="Post 3">Post 3</a>
-            <span>Author: Jason Doe</span>
-            <button type="button">Read</button>
-        </div>
+        <?php foreach ($data as $post) : ?>
+            <div class="post">
+                <a href="/<?= $post['url'] ?>" title="<?= $post['name'] ?>">
+                    <img src="/post-placeholder.png" alt="<?= $post['name'] ?>" width="200"/>
+                </a>
+                <a href="/post-1" title="<?= $post['name'] ?>"><?= $post['name'] ?></a>
+                <span>Author: <?= $post['author_name'] ?></span>
+                <span> - <?= $post['publication_date'] ?></span>
+                <button type="button">Read</button>
+            </div>
+        <?php endforeach; ?>
     </div>
 </section>

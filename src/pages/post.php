@@ -3,6 +3,7 @@
     <h1><?= $data['name'] ?></h1>
     <p><?= $data['content'] ?></p>
     <span>Author: <?= $data['author_name'] ?></span>
+    <span><?= $data['publication_date'] ?></span>
     <!-- Not necessary, can be changed to "<- Go Back"
     <button type="button"></button>
      -->

@@ -8,6 +8,7 @@
                 </a>
                 <a href="/<?= $post['url'] ?>" title="<?= $post['name'] ?>"><?= $post['name'] ?></a>
                 <span>Author: <?= $post['author_name'] ?></span>
+                <span><?= $post['publication_date'] ?></span>
                 <button type="button">Read</button>
             </div>
         <?php endforeach; ?>
