@@ -7,75 +7,111 @@ function catalogGetCategory(): array
     return [
         1 => [
             'category_id' => 1,
-            'name'        => 'Business',
-            'url'         => 'business',
-            'posts'    => [1, 2, 3]
+            'name' => 'Business',
+            'url' => 'business',
+            'posts' => [1, 2, 3]
         ],
         2 => [
             'category_id' => 2,
-            'name'        => 'Health',
-            'url'         => 'health',
-            'posts'    => [3, 4, 5]
+            'name' => 'Health',
+            'url' => 'health',
+            'posts' => [3, 4, 5]
         ],
         3 => [
             'category_id' => 3,
-            'name'        => 'Entertainment',
-            'url'         => 'entertainment',
-            'posts'    => [2, 4, 6]
+            'name' => 'Entertainment',
+            'url' => 'entertainment',
+            'posts' => [2, 4, 6]
         ],
         4 => [
             'category_id' => 4,
-            'name'        => 'Travel',
-            'url'         => 'travel',
-            'posts'    => [1, 2, 4]
+            'name' => 'Travel',
+            'url' => 'travel',
+            'posts' => [1, 2, 4]
         ]
     ];
 }
 
-function catalogGetProduct(): array
+function catalogGetPost(): array
 {
     return [
         1 => [
-            'product_id'  => 1,
-            'name'        => 'Product 1',
-            'url'         => 'product-1',
-            'description' => 'Product 1 Description',
-            'price'       => 11.99
+            'post_id' => 1,
+            'name' => 'Post 1',
+            'url' => 'post-1',
+            'author_name' => 'John Doe',
+            'publication_date' => date('Y-m-d H:i:s'),
+            'content' => <<<CONTENT
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
+                libero maxime nihil perferendis porro similique. Ab accusamus ad alias animi architecto commodi 
+                corporis cumque deserunt eius, eligendi harum ipsam ipsum molestias neque nesciunt omnis perspiciatis 
+                quia quis reiciendis repellat sint tempora vel veritatis! Dolor, quasi.
+                CONTENT
         ],
         2 => [
-            'product_id'  => 2,
-            'name'        => 'Product 2',
-            'url'         => 'product-2',
-            'description' => 'Product 2 Description',
-            'price'       => 22.99
+            'post_id' => 2,
+            'name' => 'Post 2',
+            'url' => 'post-2',
+            'author_name' => 'Jane Doe',
+            'publication_date' => date('Y-m-d H:i:s', strtotime("-2 days")),
+            'content' => <<<CONTENT
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
+                libero maxime nihil perferendis porro similique. Ab accusamus ad alias animi architecto commodi 
+                corporis cumque deserunt eius, eligendi harum ipsam ipsum molestias neque nesciunt omnis perspiciatis 
+                quia quis reiciendis repellat sint tempora vel veritatis! Dolor, quasi.
+                CONTENT
         ],
         3 => [
-            'product_id'  => 3,
-            'name'        => 'Product 3',
-            'url'         => 'product-3',
-            'description' => 'Product 3 Description',
-            'price'       => 33.99
+            'post_id' => 3,
+            'name' => 'Post 3',
+            'url' => 'post-3',
+            'author_name' => 'Jane Doe',
+            'publication_date' => date('Y-m-d H:i:s', strtotime("-3 days")),
+            'content' => <<<CONTENT
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
+                libero maxime nihil perferendis porro similique. Ab accusamus ad alias animi architecto commodi 
+                corporis cumque deserunt eius, eligendi harum ipsam ipsum molestias neque nesciunt omnis perspiciatis 
+                quia quis reiciendis repellat sint tempora vel veritatis! Dolor, quasi.
+                CONTENT
         ],
         4 => [
-            'product_id'  => 4,
-            'name'        => 'Product 4',
-            'url'         => 'product-4',
-            'description' => 'Product 4 Description',
-            'price'       => 44.99
+            'post_id' => 4,
+            'name' => 'Post 4',
+            'url' => 'post-4',
+            'author_name' => 'Jane Doe',
+            'publication_date' => date('Y-m-d H:i:s', strtotime("-4 days")),
+            'content' => <<<CONTENT
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
+                libero maxime nihil perferendis porro similique. Ab accusamus ad alias animi architecto commodi 
+                corporis cumque deserunt eius, eligendi harum ipsam ipsum molestias neque nesciunt omnis perspiciatis 
+                quia quis reiciendis repellat sint tempora vel veritatis! Dolor, quasi.
+                CONTENT
         ],
         5 => [
-            'product_id'  => 5,
-            'name'        => 'Product 5',
-            'url'         => 'product-5',
-            'description' => 'Product 5 Description',
-            'price'       => 55.99
+            'post_id' => 5,
+            'name' => 'Post 5',
+            'url' => 'post-5',
+            'author_name' => 'Jane Doe',
+            'publication_date' => date('Y-m-d H:i:s', strtotime("-5 days")),
+            'content' => <<<CONTENT
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
+                libero maxime nihil perferendis porro similique. Ab accusamus ad alias animi architecto commodi 
+                corporis cumque deserunt eius, eligendi harum ipsam ipsum molestias neque nesciunt omnis perspiciatis 
+                quia quis reiciendis repellat sint tempora vel veritatis! Dolor, quasi.
+                CONTENT
         ],
         6 => [
-            'product_id'  => 6,
-            'name'        => 'Product 6',
-            'url'         => 'product-6',
-            'description' => 'Product 6 Description',
-            'price'       => 67.00
+            'post_id' => 6,
+            'name' => 'Post 6',
+            'url' => 'post-6',
+            'author_name' => 'Jane Doe',
+            'publication_date' => date('Y-m-d H:i:s', strtotime("-6 days")),
+            'content' => <<<CONTENT
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi culpa, cupiditate eius eos impedit 
+                libero maxime nihil perferendis porro similique. Ab accusamus ad alias animi architecto commodi 
+                corporis cumque deserunt eius, eligendi harum ipsam ipsum molestias neque nesciunt omnis perspiciatis 
+                quia quis reiciendis repellat sint tempora vel veritatis! Dolor, quasi.
+                CONTENT
         ]
     ];
 }
