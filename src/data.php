@@ -7,21 +7,27 @@ function catalogGetCategory(): array
     return [
         1 => [
             'category_id' => 1,
-            'name'        => 'Apple',
-            'url'         => 'apple',
+            'name'        => 'Business',
+            'url'         => 'business',
             'products'    => [1, 2, 3]
         ],
         2 => [
             'category_id' => 2,
-            'name'        => 'Samsung',
-            'url'         => 'samsung',
+            'name'        => 'Health',
+            'url'         => 'health',
             'products'    => [3, 4, 5]
         ],
         3 => [
             'category_id' => 3,
-            'name'        => 'Xiaomi',
-            'url'         => 'xiaomi',
+            'name'        => 'Entertainment',
+            'url'         => 'entertainment',
             'products'    => [2, 4, 6]
+        ],
+        4 => [
+            'category_id' => 4,
+            'name'        => 'Travel',
+            'url'         => 'travel',
+            'products'    => [1, 2, 4]
         ]
     ];
 }
