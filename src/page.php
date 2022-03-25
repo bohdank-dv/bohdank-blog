@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{DV.Campus} PHP Framework</title>
+    <title>bohdank's Super Blog</title>
     <style>
         header,
         main,
@@ -13,18 +13,18 @@
             border: 1px dashed black;
         }
 
-        .product-list {
+        .post-list {
             display: flex;
         }
 
-        .product-list .product {
+        .post-list .post {
             max-width: 30%;
         }
     </style>
 </head>
 <body>
 <header>
-    <a href="/" title="{DV.Campus} PHP Framework">
+    <a href="/" title="bohdank's Super Blog">
         <img src="logo.jpg" alt="{DV.Campus} Logo" width="200"/>
     </a>
     <nav>

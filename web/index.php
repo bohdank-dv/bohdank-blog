@@ -18,8 +18,8 @@ switch ($requestUri) {
             break;
         }
 
-        if ($data = catalogGetProductByUrl($requestUri)) {
-            $page = 'product.php';
+        if ($data = catalogGetPostByUrl($requestUri)) {
+            $page = 'post.php';
             break;
         }
 

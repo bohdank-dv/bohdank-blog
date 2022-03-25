@@ -1,30 +1,30 @@
-<!-- @TODO: Implement recently viewed products -->
-<section title="Recently Viewed Products">
-    <h2>Recently Viewed Products</h2>
-    <div class="product-list">
-        <div class="product">
-            <a href="/product-1-url" title="Product 1">
-                <img src="/product-placeholder.png" alt="Product 1" width="200"/>
+<!-- @TODO: Implement recently viewed posts -->
+<section title="Recently Viewed Posts">
+    <h2>Recently Viewed Posts</h2>
+    <div class="post-list">
+        <div class="post">
+            <a href="/post-1-url" title="Post 1">
+                <img src="/post-placeholder.png" alt="Post 1" width="200"/>
             </a>
-            <a href="/product-1-url" title="Product 1">Product 1</a>
-            <span>$33.33</span>
-            <button type="button">Add To Cart</button>
+            <a href="/post-1-url" title="Post 1">Post 1</a>
+            <span>Author: John Doe</span>
+            <button type="button">Read</button>
         </div>
-        <div class="product">
-            <a href="/product-2-url" title="Product 2">
-                <img src="/product-placeholder.png" alt="Product 2" width="200"/>
+        <div class="post">
+            <a href="/post-2-url" title="Post 2">
+                <img src="/post-placeholder.png" alt="Post 2" width="200"/>
             </a>
-            <a href="/product-2-url" title="Product 2">Product 2</a>
-            <span>$66.66</span>
-            <button type="button">Add To Cart</button>
+            <a href="/post-2-url" title="Post 2">Post 2</a>
+            <span>Author: Jane Doe</span>
+            <button type="button">Read</button>
         </div>
-        <div class="product">
-            <a href="/product-3-url" title="Product 3">
-                <img src="/product-placeholder.png" alt="Product 3" width="200"/>
+        <div class="post">
+            <a href="/post-3-url" title="Post 3">
+                <img src="/post-placeholder.png" alt="Post 3" width="200"/>
             </a>
-            <a href="/product-3-url" title="Product 3">Product 3</a>
-            <span>$99.99</span>
-            <button type="button">Add To Cart</button>
+            <a href="/post-3-url" title="Post 3">Post 3</a>
+            <span>Author: Jason Doe</span>
+            <button type="button">Read</button>
         </div>
     </div>
 </section>
